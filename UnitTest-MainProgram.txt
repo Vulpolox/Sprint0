@@ -1,0 +1,13 @@
+using System;
+
+namespace UnitTestThing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double num = Utilities.ShittyFunctions.Add(1, 2);
+            Console.WriteLine(num);
+        }
+    }
+}
