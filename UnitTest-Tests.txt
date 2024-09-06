@@ -1,0 +1,44 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UnitTestThing;
+
+// note to future self: go to "project"->"add project reference" and select the main project to link the test project to it
+
+namespace AddMultiplyTest
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestAdd()
+        {
+            double num1 = 1;
+            double num2 = 2;
+            double correctSum = 3;
+            double rvalue = UnitTestThing.Utilities.ShittyFunctions.Add(num1, num2);
+
+            Assert.AreEqual(correctSum, rvalue);
+        }
+
+        [TestMethod]
+        public void TestGoodAdd()
+        {
+            double num1 = 1;
+            double num2 = 2;
+            double correctSum = 3;
+            double rvalue = UnitTestThing.Utilities.ShittyFunctions.GoodAdd(num1, num2);
+
+            Assert.AreEqual(correctSum, rvalue);
+        }
+
+        [TestMethod]
+        public void TestMultiply()
+        {
+            double num1 = 2;
+            double num2 = 3;
+            double correctProduct = 6;
+            double rvalue = UnitTestThing.Utilities.ShittyFunctions.Multiply(num1, num2);
+
+            Assert.AreEqual(correctProduct, rvalue);
+        }
+    }
+}
